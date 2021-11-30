@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block titulo %} Mis notas {% endblock %}
+
+{% block contenido %}
+
+<center>
+<form action="/leernotas" method="post">
+    <p>{{Nota}}</p>
+  <table>
+
+    <caption>{% for nota in constlta %}</caption>
+    <thead>
+      <tr>
+        <th>     Titulo    </th>
+        <th>     Cuerpo    </th>
+        <th>               </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{nota.tituloNota}}</td>
+        <td>{{nota.cuerpoNota}}</td>
+        <td><a href="/eliminarnota/{{nota.idNota}}">ELIMINAR</a>
+          <a href="/editarnota/{{nota.idNota}}">EDITAR</a>
+        </td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+
+{% for nombre in variable %}
+<p>
+  {{nombre}}
+</p>
+{% endfor %}
+{% endblock %}
+

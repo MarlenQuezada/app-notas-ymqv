@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+{% block head %}
+<head>
+  <meta charset="utf-8">
+  <title>{% block titulo %}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/estilo.css">
+ 
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+  
+{% block encabezado %}
+
+<div class="page">
+  <nav class="page__menu page__custom-settings menu">
+    <ul class="menu__list r-list">
+      <li class="menu__group"><a href="/templates/index.html" class="menu__link r-link text-underlined">Crear Nota</a></li>
+      <li class="menu__group"><a href="leernota.html" class="menu__link r-link text-underlined">Mis notas</a></li>
+    </ul>
+  </nav>
+</div>
+<h1>
+  <br> <img src="/static/imagen/bloc.png" width="85" height="85"><li>MIS NOTAS</li> 
+</h1>
+  
+{% endblock %}
+
+{% block contenido %}
+{% endblock %}
+
+{% block pie %}
+<div class="page">
+  <label for="titulo">--------TRABAJO REALIZADO POR MARLEN QUEZADA----------</label>
+</div>
+
+{% endblock %}
+</body>
+{% endblock %}
+</html>
